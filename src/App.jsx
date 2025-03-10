@@ -1,16 +1,12 @@
-  import Header from './header.jsx'
-  import Footer from './footer.jsx'
-  import Food from './food.jsx'
+import React from 'react';
+import Card from './card'; // Import the Card component
 
-  function App() {
-    return (
-      <>
-        <Header></Header>
-        <Food></Food>
-        <Footer></Footer>
-      </>
-    );
-    
-  }
+function App() {
+  return (
+    <div>
+      <Card /> {/* Render the Card component */}
+    </div>
+  );
+}
 
-  export default App
+export default App;
