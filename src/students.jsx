@@ -1,10 +1,20 @@
-function Student(props){
-return(
-    <div>
-        <p>Name: {props.name}</p>
-    </div>
-);
+import PropTypes from 'prop-types'; 
 
+function Student(props) {
+    return (
+        <div className="Student">
+            <p>Name: {props.name}</p>
+            <p>Age: {props.age}</p>
+            <p>Student: {props.isStudent ? "Yes" : "No"}</p>
+        </div>
+    );
 }
 
-export default Student 
+// Defining the prop types for the Student component
+Student.propTypes = {
+    name: PropTypes.string.isRequired, // Added isRequired to indicate that name is required
+    age: PropTypes.number.isRequired,  // Added isRequired to indicate that age is required
+    isStudent: PropTypes.bool.isRequired // Added isRequired to indicate that isStudent is required
+};
+
+export default Student;

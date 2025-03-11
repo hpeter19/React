@@ -1,10 +1,15 @@
-
-import styles from './button.module.css'
 function Button(){
-return(
+    const styles = {
+        backgroundColor: 'rgb(200, 100, 50)', // Corrected property name
+        color: 'azure',
+        padding: '10px 20px',
+        borderRadius: '5px',
+        cursor: 'pointer'
+    };
 
-    <button className="styles">Click Me</button>
-);
-
+    return (
+        <button className="button" style={styles}>Click Me</button>
+    );
 }
-export default Button
+
+export default Button;

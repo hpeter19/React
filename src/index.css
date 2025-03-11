@@ -1,7 +1,9 @@
-.button{
-  background-color: rgb(200, 100, 50);
-  color: azure;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+.Student {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  border: 1px solid rgb(31, 29, 29); /* Corrected the border property */
+}
+
+.Student p {
+  margin: 0;
 }
