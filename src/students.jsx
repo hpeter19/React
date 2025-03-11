@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types'; // Corrected the import statement
 
 function Student(props) {
     return (
@@ -16,5 +16,9 @@ Student.propTypes = {
     age: PropTypes.number.isRequired,  // Added isRequired to indicate that age is required
     isStudent: PropTypes.bool.isRequired // Added isRequired to indicate that isStudent is required
 };
-
+Student.defaultProps ={
+name: "Guest",
+age: 0,
+isStudent: false  
+};
 export default Student;
