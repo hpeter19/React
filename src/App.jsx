@@ -1,5 +1,6 @@
 import React from 'react';
-import Card from './Card'; // Import the Card component
+import Card from './Card'; 
+import Button from './button';// Import the Card component
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Card />
       <Card />
       <Card /> {/* Render the Card component */}
+      <Button />
     </div>
   );
 }

@@ -1,26 +1,7 @@
-.card{
-  border: 1px solid hwb(0 0% 100% / 0.539);
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgb(88, 82, 82);
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  max-width: 240px;
-  display: inline-block;
+.button{
+  background-color: rgb(200, 100, 50);
+  color: azure;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.card .cardimage2{
-  max-width: 60%;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 10px;
-
-}
-.card .card-title{
-  font-family: Arial;
-  margin:0;
-  color: hsl(0, 50%, 3%);
-
-
-}
-
-
