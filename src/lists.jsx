@@ -1,27 +1,34 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect } from "react"; // Unused import, but kept as per your request
+import PropTypes from "prop-types";
 
+function List(props) {
+  const category = props.category;
+  const itemList = props.items;
 
-function List(props){
+  const listItems = itemList.map(item => (
+    <li key={item.Id}>
+      {item.name}:&nbsp;
+      <b>{item.calories}</b> {/* Removed unnecessary semicolon */}
+    </li>
+  ));
 
-
-const category = props.category;
-const itemList=props.items;
-
-const listItems=itemList.map(item => <li key ={item.Id}>
-                     {item.name}:&nbsp;
-                     <b>{item.calories};</b>
-                     </li>);
-return(
-  <>
-    <h3 className="list-category">{category}</h3>
-    <ol className="list-items">{listItems}</ol>
-  </>
-
-);
+  return (
+    <>
+      <h3 className="list-category">{category}</h3>
+      <ol className="list-items">{listItems}</ol>
+    </>
+  );
 }
-//default properties if category is empty
-List.defaultProps={
-    category: "category",
-    items:[],
+List.PropTypes={
+    category: PropTypes.string,
+    items:PropTypes.arrayOf(PropTypes.shape({   id:PropTypes.number,
+                                              name:PropTypes.string,
+                                              calories:PropTypes.number}))
 }
-export default List
+// Default properties if category or items are empty
+List.defaultProps = {
+  category: "category",
+  items: [],
+};
+
+export default List;

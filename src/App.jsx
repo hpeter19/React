@@ -11,9 +11,9 @@ function App() {
     {Id:4,name:"Cherry", calories:33}]
 
   const vegetables =[{Id:5,name:"waru", calories:10},
-      {Id:6,name:"Spinash", calories:115},
-      {Id:7,name:"Sukuma",calories:48},
-      {Id:8,name:"Dania", calories:93}]
+    {Id:6,name:"Spinash", calories:115},
+    {Id:7,name:"Sukuma",calories:48},
+    {Id:8,name:"Dania", calories:93}]
   
 
   return (
@@ -22,8 +22,8 @@ function App() {
       <Card />
       <Card />
       <Card /> {/* Render the Card component */}
-      {fruits.length > 0 ? <List items={fruits} category="Fruits"/>: null}
-      {vegetables.length > 0 ? <List items={vegetables} category="Vegetables"/>: null}
+      {fruits.length > 0 && <List items={fruits} category="Fruits"/>}
+      {vegetables.length > 0 && <List items={vegetables} category="Vegetables"/>}
       <Button />
       <Student name="Billy" age={30} isStudent={true}/>
       <Student name="Caith" age={50} isStudent={false}/>
