@@ -19,5 +19,9 @@ return(
 
 );
 }
-
+//default properties if category is empty
+List.defaultProps={
+    category: "category",
+    items:[],
+}
 export default List
