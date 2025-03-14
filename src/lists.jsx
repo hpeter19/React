@@ -15,16 +15,16 @@ const fruits =[{Id:1,name:"Apples", calories:105},
 //fruits.sort((a,b) => a.calories-b.calories);//numerical order
 fruits.sort((a,b) => b.calories-a.calories);//reversed numerical order
 //low calory fruits
-const LowCalFruits = fruits.filter(fruit => fruit.calories <100);//low calory fruits
-
+//const LowCalFruits = fruits.filter(fruit => fruit.calories <100);//low calory fruits
+const HighCalFruits = fruits.filter(fruit => fruit.calories >=100);//High calories fruits
 
 //fruit.name object is used when each list has different name.
 //for the case of a database, we set the key as id.
 
 
-const listItems=LowCalFruits.map(LowCalFruit => <li key ={LowCalFruit.Id}>
-                     {LowCalFruit.name}:&nbsp;
-                     <b>{LowCalFruit.calories};</b>
+const listItems=HighCalFruits.map(HighCalFruit => <li key ={HighCalFruit.Id}>
+                     {HighCalFruit.name}:&nbsp;
+                     <b>{HighCalFruit.calories};</b>
                      </li>);
 return(<ol>{listItems}</ol>);
 }
