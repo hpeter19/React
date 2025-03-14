@@ -22,9 +22,8 @@ function App() {
       <Card />
       <Card />
       <Card /> {/* Render the Card component */}
-      
-      {fruits.length > 0 ? <List items={fruits} category="Fruits"/> : null}
-      {vegetables.length> 0 ?<List items={vegetables} category="Vegetables"/>: null>}
+      {fruits.length > 0 ? <List items={fruits} category="Fruits"/>: null}
+      {vegetables.length > 0 ? <List items={vegetables} category="Vegetables"/>: null}
       <Button />
       <Student name="Billy" age={30} isStudent={true}/>
       <Student name="Caith" age={50} isStudent={false}/>
