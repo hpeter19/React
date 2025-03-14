@@ -11,7 +11,8 @@ const fruits =[{Id:1,name:"Apples", calories:95},
 //fruit object should be enclosed with curly brackets
 //sorting array.a rep 1st item while b rep 2nd item
 //fruits.sort((a,b) => a.name.localeCompare(b.name));//Alphabetical Order
-fruits.sort((a,b) => b.name.localeCompare(a.name));//reverse order
+//fruits.sort((a,b) => b.name.localeCompare(a.name));//reverse order
+fruits.sort((a,b) => a.calories-b.calories)
 //fruit.name object is used when each list has different name.
 //for the case of a database, we set the key as id.
 const listItems= fruits.map(fruit => <li key ={fruit.Id}>
