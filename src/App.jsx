@@ -3,6 +3,7 @@ import Card from './Card';
 import Button from './button';// Import the Card component
 import Student from './students'; 
 import List from './lists';
+import Buttonn from './buttonn';
 
 function App() {
   const fruits =[{Id:1,name:"Apples", calories:105},
@@ -25,6 +26,7 @@ function App() {
       {fruits.length > 0 && <List items={fruits} category="Fruits"/>}
       {vegetables.length > 0 && <List items={vegetables} category="Vegetables"/>}
       <Button />
+      <Buttonn />
       <Student name="Billy" age={30} isStudent={true}/>
       <Student name="Caith" age={50} isStudent={false}/>
       <Student name="Brandon" age={20} isStudent={true}/>
