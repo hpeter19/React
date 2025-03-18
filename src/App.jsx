@@ -4,6 +4,7 @@ import Button from './button';// Import the Card component
 import Student from './students'; 
 import List from './lists';
 import MyComponent from './myComponent';
+import Counter from './counter';
 
 function App() {
   const fruits =[{Id:1,name:"Apples", calories:105},
@@ -20,6 +21,7 @@ function App() {
   return (
     <div >
       <MyComponent />
+      <Counter />
       <Card />
       <Card />
       <Card />
