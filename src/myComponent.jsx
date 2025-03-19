@@ -1,37 +1,22 @@
 import React,{useState} from 'react';
 
+
 function MyComponent(){
-const [name,setName]= useState();
-const [age,setAge] = useState(0); //setting age component to increment age
-//age is set to initially 0 after which its incremenented
-const [isEmployed, setIsEmployed]= useState(false);
+const[name,setName] = useState("Guests");
+const[quantity,setQuantity] =useState(1);
+ function handleNameChange(event){
+    setName(event.target.value);
+ }
+ function handleQuantityChange(event){
+    setQuantity(event.target.value);
+ }
 
-const updateName = () => {
-
-    setName("mark");
-}    
-const incrementAge = () => {
-    setAge(age + 1);
-
-}   
-
-const toggleEmployedStatus =() =>{
-    setIsEmployed(!isEmployed);
-
-}
 return(<div>
-    <p>Name: {name}</p>
-    <button onClick={updateName}>set Name</button>
-
-
-    <p>Age: {age}</p>
-    <button onClick= {incrementAge} > Increment Age </button>
-//toggle key
-    <p>Is Employed: {isEmployed ? "yes":"no"}</p>
-    <button onClick= {toggleEmployedStatus} > Toggle status</button>
-
-</div>);
-
+    <input value={name} onChange={handleNameChange}/>
+    <p>Name:{name}</p>
+    <input value={quantity} onChange={handleQuantityChange} type='number' />
+    <p>Quantity: {quantity}</p>
+      </div>);
 }
 
 export default MyComponent
