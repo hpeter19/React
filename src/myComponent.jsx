@@ -50,15 +50,15 @@ return(<div>
                  onChange={handleShipingChange} />
 
         Pick Up
-    </label><br/>
+    </label>
+    
     <label>
     <input type="radio" value="Delivery"
                  checked={shipping === "Delivery"} 
                  onChange={handleShipingChange} />
-
-        Delivery
+        Delivery         
     </label>
-    <P>Shipping: {shipping}</P>
+    <p>Shipping: {shipping}</p>
       </div>);
 }
 
