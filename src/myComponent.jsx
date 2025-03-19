@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-
+//On change event handlers
 
 function MyComponent(){
     //function of the user
@@ -10,6 +10,8 @@ const[quantity,setQuantity] =useState(1);
 const[comment,setComment]= useState("");
 //Payment function
 const [payment,setPayment] =useState("");
+//Radio buttons selecting different ways to pick your good
+const [shipping,setShipping]=useState("");
  function handleNameChange(event){
     setName(event.target.value);
  }
@@ -21,6 +23,10 @@ const [payment,setPayment] =useState("");
  }
  function handlePaymentChange(event){
     setPayment(event.target.value);
+ }
+ function handleShipingChange(event){
+    setShipping(event.target.value);
+
  }
 
 return(<div>
@@ -38,7 +44,21 @@ return(<div>
         <option value="Mpesa">Mpesa</option>
     </select>
     <p>Payment:{payment}</p>
-    <option></option>
+    <label>
+        <input type="radio" value="Pick Up"
+                 checked={shipping === "Pick Up"} 
+                 onChange={handleShipingChange} />
+
+        Pick Up
+    </label><br/>
+    <label>
+    <input type="radio" value="Delivery"
+                 checked={shipping === "Delivery"} 
+                 onChange={handleShipingChange} />
+
+        Delivery
+    </label>
+    <P>Shipping: {shipping}</P>
       </div>);
 }
 
