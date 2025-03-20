@@ -5,6 +5,8 @@ import Student from './students';
 import List from './lists';
 import MyComponent from './myComponent';
 import Counter from './counter';
+import ColorPicker from './colorPicker';
+
 
 function App() {
   const fruits =[{Id:1,name:"Apples", calories:105},
@@ -20,6 +22,7 @@ function App() {
 
   return (
     <div >
+      <ColorPicker />
       <MyComponent />
       <Counter />
       <Card />

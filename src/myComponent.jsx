@@ -24,7 +24,7 @@ const [shipping,setShipping]=useState("");
  function handlePaymentChange(event){
     setPayment(event.target.value);
  }
- function handleShipingChange(event){
+ function handleShippingChange(event){
     setShipping(event.target.value);
 
  }
@@ -47,15 +47,15 @@ return(<div>
     <label>
         <input type="radio" value="Pick Up"
                  checked={shipping === "Pick Up"} 
-                 onChange={handleShipingChange} />
+                 onChange={handleShippingChange} />
 
         Pick Up
     </label>
-    
+    <br/>
     <label>
     <input type="radio" value="Delivery"
                  checked={shipping === "Delivery"} 
-                 onChange={handleShipingChange} />
+                 onChange={handleShippingChange} />
         Delivery         
     </label>
     <p>Shipping: {shipping}</p>
