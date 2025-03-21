@@ -6,11 +6,14 @@ const[count,setCount] =useState(0);
 
 
 const increament = () =>{
-    setCount(count + 1);
+    setCount(c => c+ 1);
+    setCount(c => c+ 1);
 }
-
+//a function set on argument useState.Allows for safe updates based on the previous updates.used with multiple state updates.
+//Updater functions
 const decrement = () =>{
-    setCount(count - 1);
+    setCount(c => c- 1);
+    setCount(c => c- 1);
 }
 
 const reset = () =>{
