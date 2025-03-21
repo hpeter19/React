@@ -6,6 +6,7 @@ import List from './lists';
 import MyComponent from './myComponent';
 import Counter from './counter';
 import ColorPicker from './colorPicker';
+import MyComponento from './myComponento';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div >
+      <MyComponento />
       <ColorPicker />
       <MyComponent />
       <Counter />
