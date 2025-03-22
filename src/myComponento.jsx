@@ -1,32 +1,52 @@
-import { element } from 'prop-types';
 import React,{useState} from 'react';
 //importing the source objects
 function MyComponento(){
 
-        const[food,setFood]=useState(["apple","Orange","Mangoe"]);
-          
-        function addHandleFood(){ //function to clear add  new food item 
-            const newfood = document.getElementById('foodInput').value ;
-            document.getElementById('foodInput').value="" ;
-//using the spread operator to access intial values
-            setFood(f => [...food, newfood])
-        }
-       //setting up a remover function 
-        function handleRemoveFood(index){
-            setFood(food.filter((_, i) => i !==index));
-        }
-        //adding list to the components
-    return(<div>
-        <h2>List Of Food :</h2>
-        <ul>
-            {food.map((food, index) => 
-               <li key={index}  onClick={() =>handleRemoveFood(index)}>
-                {food}
-                </li>)}
-        </ul>
-        <input type='text' id='foodInput' placeholder="Enter your foods name"/>
-        <button onClick={addHandleFood}>Add Food</button>
-    </div>);
+
+  const [cars,setCars]= useState([]);
+  const [carYear,setCarYear]=useState(new Date().getFullYear());
+  const [carMake,setCarMake]=useState("");
+  const [carModel,setCarModel]=useState("");
+
+    function handleAddCar(){
+
+        const newcar={year: carYear, make:carMake,model:carModel}
+        setCars(c => [...c,newcar])//adding older elements of the car and passing on the list of the new objects
+//using the previous state of cars by using the object naming convention of first letter of the previous objects
+        setCarYear(new Date().getFullYear());
+        setCarMake("");
+        setCarModel("")
+        
+        
+}
+
+    function handleRemoveCar(index){
+          setCars(c => c.filter((_,i) => i !==index))
+    }
+    function handleYearChange(event){
+       setCarYear(event.target.value)
+    }
+    function handleMakeChange(event){
+        setCarMake(event.target.value)
+    }
+    function handleModelChange(event){
+        setCarModel(event.target.value)
+    }
+  return(<div>
+            <h2>List of Cars Objects</h2>
+          <ul>
+                 {cars.map((car,index)=> 
+                  <li key={index} onClick={() =>handleRemoveCar(index)}>
+                     {car.year} {car.make} {car.model}
+                  </li>)}
+          </ul>
+
+          <input type='number' value={carYear} onChange={handleYearChange}/><br/>
+          <input type='text' value={carMake} onChange={handleMakeChange} placeholder='Enter car make'/><br/>
+          <input type='text' value={carModel} onChange={handleModelChange} placeholder='Enter car model'/><br/>
+          <button onClick={handleAddCar}>Add car</button>
+
+       </div>);
 
 }
 export default MyComponento
