@@ -10,11 +10,18 @@
     
     }
         function AddTask(){
-            setTask(t =>[...t,newTask] );
+            //function not to add an empty task
+            //adding tasks
+            if(newTask.trim() !== ""){
+                setTask(t =>[...t,newTask] );
             setNewTask("")
 
+            }
     }
-        function DeleteTask(){
+        function DeleteTask(index){
+
+            const updatedTasks= tasks.filter((_,i) => i !== index);
+            setTask(updatedTasks);
 
     }
         function MoveTaskUp(){
