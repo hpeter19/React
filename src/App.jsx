@@ -7,6 +7,7 @@ import MyComponent from './myComponent';
 import Counter from './counter';
 import ColorPicker from './colorPicker';
 import MyComponento from './myComponento';
+import ToDoList from './toDoList';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div >
+      <ToDoList />
       <MyComponento />
       <ColorPicker />
       <MyComponent />
