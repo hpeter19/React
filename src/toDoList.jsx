@@ -18,14 +18,21 @@
 
             }
     }
+    //adding delete button
         function DeleteTask(index){
 
             const updatedTasks= tasks.filter((_,i) => i !== index);
             setTask(updatedTasks);
 
     }
-        function MoveTaskUp(){
-
+    //array distructuring to sort 2 elements within an array
+    //moving tasks down
+        function MoveTaskUp(index){
+       if(index>0){
+        const updatedTasks=[...tasks];
+        [updatedTasks[index],updatedTasks[index-1]]=[updatedTasks[index-1],updatedTasks[index]];
+        setTask(updatedTasks)
+       }
     }
 
         function MoveTaskDown(){
