@@ -7,8 +7,8 @@ function Mycompnent(){
 
 
      useEffect(() => {
-        document.title=`count: ${count}`;
-     },[count]);
+        document.title=`count: ${count} ${color}`;
+     },[count,color]);//dependency array,when one of the values change,perform that side code
      
 
      function addCount(){
