@@ -23,14 +23,17 @@ function DigitalClock(){
 
          hours = hours % 12 || 12;
 
-         return `${hours}:${minutes}:${seconds} ${meridian}`
+         return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridian}`
 
     }
-
+    //adding zero 
+    function padZero(number){
+        return (number <10 ? "0":"") + number
+    }
     
     return(<div className='clock-container'>
               <div className='clock'>
-                <span>{formatTime}</span>
+                <span>{formatTime()}</span>
 
               </div>
 
