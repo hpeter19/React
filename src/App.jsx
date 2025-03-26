@@ -9,6 +9,8 @@ import ColorPicker from './colorPicker';
 import MyComponento from './myComponento';
 import ToDoList from './toDoList';
 import Mycompnent from './myCompnent';
+import DigitalClock from './digitalClock';
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
 
   return (
     <div >
+      <DigitalClock />
       <ToDoList />
       <Mycompnent />
       <MyComponento />
