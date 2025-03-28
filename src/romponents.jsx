@@ -13,6 +13,8 @@
         function handleClick1(){
              inputRef1.current.focus();
              inputRef1.current.style.backgroundColor="green";
+             inputRef2.current.style.backgroundColor="";
+             inputRef3.current.style.backgroundColor="";
 
         }
         function handleClick2(){
