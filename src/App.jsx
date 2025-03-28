@@ -10,6 +10,7 @@ import MyComponento from './myComponento';
 import ToDoList from './toDoList';
 import Mycompnent from './myCompnent';
 import DigitalClock from './digitalClock';
+import ComponentA from '../componentA';
 
 
 
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div >
+      <ComponentA />
       <DigitalClock />
       <ToDoList />
       <Mycompnent />
