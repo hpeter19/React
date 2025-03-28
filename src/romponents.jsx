@@ -6,11 +6,10 @@
 
         useEffect(() => {
             console.log("Component Rendered")
-            console.log(inputRef);
         });
         
         function handleClick(){
-            ref.current++
+             inputRef.current.focus();
         }
 
 
