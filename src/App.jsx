@@ -11,6 +11,7 @@ import ToDoList from './toDoList';
 import Mycompnent from './myCompnent';
 import DigitalClock from './digitalClock';
 import ComponentA from '../componentA';
+import Remponent from './romponents';
 
 
 
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div >
+      <Remponent />
       <ComponentA />
       <DigitalClock />
       <ToDoList />
